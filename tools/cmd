@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [[ $# -eq 0 ]]; then
+  echo "Please provide argument"
+  echo "Usage: ./tools/run build|run|test|clear"
+
+elif [[ "$1" = "build" ]]; then
+  # cmake build prerequisites.
+  if [[ -d "./build" ]]; then
+    if [[ "$2" = "all" ]]; then
+      rm -rf build
+    fi
+  else
+    mkdir -p build
+  fi
+
+  # execute cmake build
+  cmake -S . -B build
+  cmake --build build
+
+elif [[ "$1" = "run" ]]; then
+  # run app
+  "./build/bin/emcpp_item-${2}"
+
+# elif [[ "$1" = "test" ]]; then
+#   # run test
+#   GTEST_COLOR=1 ctest -V --test-dir build/ --output-on-failure -j 12
+
+elif [[ "$1" = "clean" ]]; then
+  # clean build
+  if [[ -d "./build" ]]; then
+    rm -rf build
+  fi
+
+else
+  echo "Invalid argument: $1"
+fi
