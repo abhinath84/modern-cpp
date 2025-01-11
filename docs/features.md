@@ -4,36 +4,36 @@
 
 ### Core Language Features
 
-1.  Auto type deduction ***[In-progress: 70%]***
+1. Auto type deduction ***[In-progress: 70%]***
    - Automatic type inference
    - Primarily used with iterators and complex template types
-2.  `nullptr` ***[Done]***
+2. `nullptr` ***[Done]***
    - Replaces NULL macro
    - Type-safe pointer value
-3.  Range-based `for` loops ***[Not-started]***
+3. Range-based `for` loops ***[Not-started]***
    - `for (auto& element : container)`
-4.  Lambda expressions ***[Done]***
+4. Lambda expressions ***[Done]***
    - Anonymous functions
    - Capture clauses ([] = empty, [=] = by value, [&] = by reference)
-5.  Move semantics & rvalue references ***[Done]***
+5. Move semantics & rvalue references ***[Done]***
    - `std::move()`
    - Rvalue references (Type&&)
    - Move constructors
    - Move assignment operators
-6.  Uniform initialization ***[In-progress: 20%]***
+6. Uniform initialization ***[In-progress: 20%]***
    - Brace initialization {}
    - Works with all types
    - Prevents narrowing conversions
-7.  `constexpr` ***[Done]***
+7. `constexpr` ***[Done]***
    - Compile-time constants
    - Constexpr functions
-8.  Type inference ***[In-progress: 80%]***
+8. Type inference ***[In-progress: 80%]***
    - `decltype` keyword
    - Trailing return types
    - Auto return type deduction
-9.  Static assertions ***[Not-started]***
-  - Compile-time assertions
-  - `static_assert(condition, message)`
+9. Static assertions ***[Not-started]***
+   - Compile-time assertions
+   - `static_assert(condition, message)`
 
 ### Template Improvements
 
